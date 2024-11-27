@@ -1,0 +1,32 @@
+/*Eng. shenouda besheer*/
+        nav.custom-navbar .navbar-brand .name {
+            font-size: 1.5rem; 
+            color: white; 
+            font-weight: bold; 
+        }
+        /*developer*/
+        nav.custom-navbar .navbar-brand .title {
+            font-size: 0.9rem;
+            color: whitesmoke; 
+            font-style: italic; 
+        }
+        /*Menu*/
+        nav.custom-navbar .navbar-toggler {
+            color: white;
+        }
+        /* lon al klam : home about */
+        nav.custom-navbar .navbar-nav .nav-link {
+            color: white;
+            padding: 10px;
+        }
+        /* lon al klam lma ados 3leh : home about */
+        nav.custom-navbar .navbar-nav .nav-link:hover {
+            color: greenyellow;
+        }
+        /* lon al5lfia */
+        nav.custom-navbar {
+            background: #000d4a ;
+        }
+
+
+        
