@@ -1,32 +1,65 @@
-/*Eng. shenouda besheer*/
-        nav.custom-navbar .navbar-brand .name {
-            font-size: 1.5rem; 
-            color: white; 
-            font-weight: bold; 
-        }
-        /*developer*/
-        nav.custom-navbar .navbar-brand .title {
-            font-size: 0.9rem;
-            color: whitesmoke; 
-            font-style: italic; 
-        }
-        /*Menu*/
-        nav.custom-navbar .navbar-toggler {
-            color: white;
-        }
-        /* lon al klam : home about */
-        nav.custom-navbar .navbar-nav .nav-link {
-            color: white;
-            padding: 10px;
-        }
-        /* lon al klam lma ados 3leh : home about */
-        nav.custom-navbar .navbar-nav .nav-link:hover {
-            color: greenyellow;
-        }
-        /* lon al5lfia */
-        nav.custom-navbar {
-            background: #000d4a ;
-        }
+/* Container Alignment */
+nav.custom-navbar .container-xl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo+name and menu */
+}
+
+/* Logo */
+nav.custom-navbar .logo img {
+    width: auto; /* Adjust logo size */
+    height: auto;
+}
+
+/* Name and Title */
+nav.custom-navbar .navbar-brand  .name{
+    display: flex;
+    flex-direction: column; /* Stack name and title vertically */
+    align-items: flex-start;
+    margin-left: 50px;
+    font-size: 1.5rem; 
+    color: white; 
+    font-weight: bold; 
+}
+
+/* Name and Title */
+nav.custom-navbar .navbar-brand  .title {
+    display: flex;
+    flex-direction: column; /* Stack name and title vertically */
+    align-items: flex-start;
+    margin-left: 50px;
+    font-size: 1rem;
+    color: whitesmoke; 
+    font-style: italic;  
+}
+
+/* Navbar Links */
+nav.custom-navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav.custom-navbar .navbar-nav .nav-link {
+    color: white;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+nav.custom-navbar .navbar-nav .nav-link:hover {
+    color: greenyellow;
+}
+
+/* Navbar Background */
+nav.custom-navbar {
+    background: #000d4a;
+    height: auto; /* Allow dynamic height */
+}
 
 
-        
+.menu-text {
+    color: white; /* Set text color to white */
+    font-size: 1.5rem; /* Optional: Set font size */
+    font-weight: bold; /* Optional: Make it bold */
+    margin-left: 0px; /* Optional: Add spacing from the icon */
+}
+
