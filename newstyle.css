@@ -1,65 +1,110 @@
-/* Container Alignment */
-nav.custom-navbar .container-xl {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between logo+name and menu */
-}
-
-/* Logo */
-nav.custom-navbar .logo img {
-    width: auto; /* Adjust logo size */
-    height: auto;
-}
-
-/* Name and Title */
-nav.custom-navbar .navbar-brand  .name{
-    display: flex;
-    flex-direction: column; /* Stack name and title vertically */
-    align-items: flex-start;
-    margin-left: 50px;
-    font-size: 1.5rem; 
-    color: white; 
-    font-weight: bold; 
-}
-
-/* Name and Title */
-nav.custom-navbar .navbar-brand  .title {
-    display: flex;
-    flex-direction: column; /* Stack name and title vertically */
-    align-items: flex-start;
-    margin-left: 50px;
-    font-size: 1rem;
-    color: whitesmoke; 
-    font-style: italic;  
-}
-
-/* Navbar Links */
-nav.custom-navbar .navbar-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav.custom-navbar .navbar-nav .nav-link {
-    color: white;
-    padding: 0 15px;
-    font-size: 1rem;
-}
-
-nav.custom-navbar .navbar-nav .nav-link:hover {
-    color: greenyellow;
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar Background */
-nav.custom-navbar {
-    background: #000d4a;
-    height: auto; /* Allow dynamic height */
+.custom-navbar {
+    background-color: #000d4a;
 }
 
+/* Navbar Logo */
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Navbar Brand Text */
+.navbar-brand .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 80px;
+    color: white;
+}
+
+.navbar-brand .title {
+    font-size: 1rem;
+    color: whitesmoke;
+    margin-left: 80px;
+    font-style: italic;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    color: greenyellow;
+}
+
+/* Toggle Button */
+.custom-toggler {
+    border-color: white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
 .menu-text {
-    color: white; /* Set text color to white */
-    font-size: 1.5rem; /* Optional: Set font size */
-    font-weight: bold; /* Optional: Make it bold */
-    margin-left: 0px; /* Optional: Add spacing from the icon */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+
+    .navbar-brand .name {
+        font-size: 1.35rem;
+        font-weight: bold;
+        margin-left: 70px;
+        color: white;
+    }
+
+    .navbar-brand .title {
+        font-size: 0.9rem;
+    font-style: italic;  
+        margin-left: 70px;
+        color: white;
+    }
+
+    .menu-text {
+         color: white;
+    font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        width: 80px;
+    }
+
+    .navbar-brand .name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-left: 80px;
+        color: white;
+    }
+
+    .navbar-brand .title {
+        font-size: 1rem;
+    font-style: italic;  
+        margin-left: 80px;
+        color: white;
+    }
+}
