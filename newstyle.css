@@ -12,29 +12,39 @@ body {
 
 /* Navbar Logo */
 .logo {
-    width: 120px;
+    max-width: 15%;
     height: auto;
+    margin-right: 20px; /* المسافة بين الشعار وبقية العناصر */
 }
 
 /* Navbar Brand Text */
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px; /* المسافة بين اللوجو وبقية النصوص */
+}
+
 .navbar-brand .name {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 80px;
     color: white;
+    margin: 0;
+    margin-left: 70px; /* المسافة بين اسم العلامة التجارية والعناصر المجاورة */
 }
 
 .navbar-brand .title {
     font-size: 1rem;
     color: whitesmoke;
-    margin-left: 80px;
     font-style: italic;
+    margin: 0;
+    margin-left: 70px; /* المسافة بين العنوان والعناصر المجاورة */
 }
 
 /* Navbar Links */
 .navbar-nav .nav-link {
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 10px 15px;
     text-align: center;
 }
@@ -45,18 +55,25 @@ body {
 
 /* Toggle Button */
 .custom-toggler {
-    border-color: white;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
 }
 
 .custom-toggler .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .menu-text {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 10px; /* المسافة بين الأيقونة والنص */
 }
 
 /* Responsive Design */
@@ -66,22 +83,22 @@ body {
     }
 
     .navbar-brand .name {
-        font-size: 1.35rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        margin-left: 70px;
+        margin-left: 50px;
         color: white;
     }
 
     .navbar-brand .title {
-        font-size: 0.9rem;
-    font-style: italic;  
-        margin-left: 70px;
+        font-size: 1.rem;
+        font-style: italic;  
+        margin-left: 50px;
         color: white;
     }
 
     .menu-text {
-         color: white;
-    font-size: 1rem;
+        color: white;
+        font-size: 1rem;
     }
 
     .navbar-nav .nav-link {
@@ -97,14 +114,14 @@ body {
     .navbar-brand .name {
         font-size: 1.2rem;
         font-weight: bold;
-        margin-left: 80px;
+        margin-left: 60px;
         color: white;
     }
 
     .navbar-brand .title {
         font-size: 1rem;
-    font-style: italic;  
-        margin-left: 80px;
+        font-style: italic;  
+        margin-left: 60px;
         color: white;
     }
 }
@@ -112,27 +129,27 @@ body {
 /* هواتف بشاشات كبيرة */
 @media (min-width: 768px) and (max-width: 1080px) {
     .custom-navbar .navbar-brand .name {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        margin-left: 80px;
+        margin-left: 70px;
         color: white;
     }
 
     .custom-navbar .navbar-brand .title {
         font-size: 1rem;
-    font-style: italic;  
-        margin-left: 80px;
+        font-style: italic;  
+        margin-left: 70px;
         color: white;
     }
 
     .custom-toggler .menu-text {
         color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 10px;
     }
 
     .navbar-nav .nav-link {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 }
