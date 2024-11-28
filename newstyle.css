@@ -8,6 +8,7 @@ body {
 /* Navbar Background */
 .custom-navbar {
     background-color: #000d4a;
+    width: auto;
 }
 
 /* Navbar Logo */
