@@ -71,4 +71,22 @@ nav.custom-navbar .d-flex {
     font-size: 1.2rem; /* تصغير حجم النص إذا كان كبيرًا جدًا */
     white-space: nowrap; /* منع الكلمة من الانكسار إلى سطر جديد */
 }
+@media (max-width: 768px) { /* الهواتف المحمولة */
+    .navbar-toggler {
+        margin-left: auto; /* دفع زر القائمة إلى اليمين */
+    }
+
+    .logo img {
+        width: 100px; /* تصغير الشعار */
+        height: auto;
+    }
+
+    .menu-text {
+        font-size: 1rem; /* تصغير حجم النص */
+    }
+
+    nav.custom-navbar .d-flex {
+        flex-wrap: nowrap; /* منع النزول إلى سطر جديد */
+    }
+}
 
