@@ -46,18 +46,8 @@ header {
 
 .logo-img {
     width: 150px; /* تعديل حجم اللوجو */
-    margin-right: 15px; /* مسافة بين اللوجو واسم الشركة */
 }
 
-header h1 {
-    margin: 0;
-    margin-right: ;
-    font-size: 1.5rem; /* زيادة حجم النص */
-    color:  white; /* لون اسم الشركة */
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
-    letter-spacing: 0px; /* إضافة مسافة بين الحروف */
-}
 
 /* قائمة التنقل */
 nav ul {
