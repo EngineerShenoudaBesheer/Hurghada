@@ -1,162 +1,74 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Navbar Background */
+nav.custom-navbar {
+    background: #000d4a;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar Background */
-.custom-navbar {
-    background-color: #000d4a;
-    width: 100%; /* تأكد من أن الخلفية تغطي العرض الكامل */
-    position: fixed; /* جعل الشريط العلوي ثابت في أعلى الصفحة */
-    top: 0; /* لضمان أن الشريط في أعلى الصفحة */
-    left: 0; /* تأكد من أنه يبدأ من الجهة اليسرى */
-    right: 0; /* تأكد من أنه يمتد للجهة اليمنى */
-    z-index: 1000; /* اجعل الشريط في الأعلى */
-    padding: 10px 0; /* ضبط المسافة من الأعلى والأسفل */
+nav.custom-navbar .container-xl {
+    max-width: 100%; 
+    padding: 0 15px; 
 }
 
-/* Navbar Logo */
-.logo {
-    max-width: 15%;
+/* Logo */
+nav.custom-navbar .logo img {
+    margin-left: 50px;
+    width: auto; /* Adjust logo size */
     height: auto;
-    margin-right: 20px; /* المسافة بين الشعار وبقية العناصر */
 }
 
-/* Navbar Brand Text */
-.navbar-brand {
+/* Name and Title */
+nav.custom-navbar .navbar-brand  .name{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack name and title vertically */
     align-items: flex-start;
-    margin-left: 20px; /* المسافة بين اللوجو وبقية النصوص */
+    margin-left: 50px;
+    font-size: 1.5rem; 
+    color: white; 
+    font-weight: bold; 
 }
 
-.navbar-brand .name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    margin-left: 70px; /* المسافة بين اسم العلامة التجارية والعناصر المجاورة */
-}
-
-.navbar-brand .title {
+/* Name and Title */
+nav.custom-navbar .navbar-brand  .title {
+    display: flex;
+    flex-direction: column; /* Stack name and title vertically */
+    align-items: flex-start;
+    margin-left: 50px;
     font-size: 1rem;
-    color: whitesmoke;
-    font-style: italic;
-    margin: 0;
-    margin-left: 70px; /* المسافة بين العنوان والعناصر المجاورة */
+    color: whitesmoke; 
+    font-style: italic;  
 }
 
 /* Navbar Links */
-.navbar-nav .nav-link {
-    color: white;
-    font-size: 1.3rem;
-    padding: 10px 15px;
-    text-align: center;
+nav.custom-navbar .navbar-nav {
+    display: flex;
+    align-items: center;
 }
 
-.navbar-nav .nav-link:hover {
+nav.custom-navbar .navbar-nav .nav-link {
+    color: white;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+nav.custom-navbar .navbar-nav .nav-link:hover {
     color: greenyellow;
 }
 
-/* Toggle Button */
-.custom-toggler {
-    display: flex;
-    align-items: center;
-    border: none;
-    background: transparent;
+
+nav.custom-navbar .d-flex {
+    flex-wrap: nowrap; /* منع العناصر من النزول إلى سطر جديد */
 }
 
-.custom-toggler .navbar-toggler-icon {
-    width: 30px;
-    height: 30px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
+.navbar-toggler {
+    margin-left: auto; /* دفع زر القائمة إلى أقصى اليمين */
 }
 
 .menu-text {
     color: white;
-    font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 10px; /* المسافة بين الأيقونة والنص */
+    font-size: 1.2rem; /* تصغير حجم النص إذا كان كبيرًا جدًا */
+    white-space: nowrap; /* منع الكلمة من الانكسار إلى سطر جديد */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo {
-        width: 100px;
-    }
-
-    .navbar-brand .name {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-left: 50px;
-        color: white;
-    }
-
-    .navbar-brand .title {
-        font-size: 1.rem;
-        font-style: italic;  
-        margin-left: 50px;
-        color: white;
-    }
-
-    .menu-text {
-        color: white;
-        font-size: 1rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .logo {
-        width: 80px;
-    }
-
-    .navbar-brand .name {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-left: 60px;
-        color: white;
-    }
-
-    .navbar-brand .title {
-        font-size: 1rem;
-        font-style: italic;  
-        margin-left: 60px;
-        color: white;
-    }
-}
-
-/* هواتف بشاشات كبيرة */
-@media (min-width: 768px) and (max-width: 1080px) {
-    .custom-navbar .navbar-brand .name {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-left: 70px;
-        color: white;
-    }
-
-    .custom-navbar .navbar-brand .title {
-        font-size: 1rem;
-        font-style: italic;  
-        margin-left: 70px;
-        color: white;
-    }
-
-    .custom-toggler .menu-text {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.1rem;
-    }
-}
