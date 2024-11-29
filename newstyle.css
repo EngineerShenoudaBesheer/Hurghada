@@ -52,8 +52,7 @@ header {
 header h1 {
     margin: 0;
     margin-right: ;
-    font-size: 2.5rem; /* زيادة حجم النص */
-    font-weight: 600;
+    font-size: 1.5rem; /* زيادة حجم النص */
     color:  white; /* لون اسم الشركة */
     font-family: 'Arial', sans-serif;
     text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
