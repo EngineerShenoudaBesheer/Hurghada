@@ -14,45 +14,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-cMkJib1noPK7pMzFP6x7/M6Id2MaHYw/OgzmCXE6/pwqayB+Zxp62zDAAJi4+MUUJzmSrt+ThOO76T7UK5S3Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="script.js" defer></script>
 </head>
 
 <body >
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="لوجو الشركة" class="logo-img">
-            
         </div>
         <nav>
             <ul>
                 <li><a href="#projects">المشاريع</a></li>
                 <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#marketing-team">فريق التسويق</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
+                <li>
+                    <select id="languageSelector" onchange="changeLanguage(this)">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="fr">Français</option>
+                        <option value="es">Español</option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
 
 
+    <section id="about" class="about">
+         <div class="w3-container w3-padding-32" id="about"  >
+            <hr>
+            <h1 id="aboutTitle">الشركة</h1>
+            <p id="aboutContent">جموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء</p>
+            <h1 id="missionTitle">رسالة الشركة</h1>
+            <p id="missionContent">نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
+            <h1 id="ownerTitle">عن صاحب الشركة</h1>
+            <p id="ownerName"><strong>المهندس الإنشائي شنودة بشير</strong></p>
+            <p id="ownerContent">يعتبر المهندس الإنشائي شنودة بشير من الشخصيات البارزة في مجال الإنشاءات والعقارات في منطقة البحر الأحمر. بخبرته الواسعة التي تمتد لسنوات عديدة في هذا المجال، يلتزم بتقديم مشاريع عقارية متميزة تواكب أعلى المعايير العالمية.</p>
+            <div class="contact-info">
+                <h2 id="contactDetailsTitle">لمزيد من التفاصيل أو للاستفسار، يمكنكم التواصل معنا عبر:</h2>
+                <p id="contactPage">الرسائل على الصفحة: <a href="http://m.me/102254001195838">مجموعة المهنس الإنشائي شنودة بشير</a></p>
+                <p id="address">مقر المجموعة في الغردقة، البحر الأحمر، مصر. موقعنا: 
+                    <a href="https://www.google.com/maps?q=27.213655,33.836384" target="_blank">
+                        موقع الشركة
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
 
+
+
+    <!-- قسم المشاريع -->
     <section id="projects" class="projects">
         <h2>مشاريعنا</h2>
         <div class="project-list">
-            <div class="project">
+            <div class="project" onclick="showProjectDetails('marina')">
                 <img src="project1.jpg" alt="مشروع 1">
                 <h3>مشروع المارينا</h3>
                 <p>وصف مختصر عن المشروع...</p>
             </div>
-            <div class="project">
+            <div class="project" onclick="showProjectDetails('hegaz')">
                 <img src="project2.jpg" alt="مشروع 2">
                 <h3>مشروع الحجاز</h3>
-                <p>وصف مختصر عن المشروع...</p>
+                <p>وصف سبنتلارثنتبلارنتيبلارنتلابنترلابنتلارنتبلمختصر عن المشروع...</p>
             </div>
-            <div class="project">
+            <div class="project" onclick="showProjectDetails('king-tut')">
                 <img src="project3.jpg" alt="مشروع 3">
                 <h3>مشروع الملك توت</h3>
                 <p>وصف مختصر عن المشروع...</p>
             </div>
         </div>
+    </section>
+
+
+
+    <!-- قسم التواصل مع فريق التسويق -->
+    <section id="marketing-team" class="marketing-team">
+        <h2 id="supportTitle">التواصل مع فريق التسويق</h2>
+        <br>
+        <ul class="list-unstyled">
+            <li>
+                <span id="Team1">كيرلس نصحي</span> 
+                <a href="https://www.facebook.com/KerollosRealEstate/" target="_blank">Facebook</a><span>|</span>
+                <a href="https://wa.me/201044096035" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </li>
+            <li>
+                <span id="Team2">كرستين عاطف</span> 
+                <a href="https://www.facebook.com/share/1B3j1jK6sj/" target="_blank">Facebook</a><span>|</span>
+                <a href="https://wa.me/201044096036" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </li>
+            <li>
+                <span id="Team3">سارة سرور</span> 
+                <a href="https://www.facebook.com/profile.php?id=100081332409604&mibextid=ZbWKwL" target="_blank">Facebook</a><span>|</span>
+                <a href="https://wa.me/201044096037" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </li>
+            <li>
+                <span id="Team4">الين ناجح</span> 
+                <a href="https://www.facebook.com/elinnageh" target="_blank">Facebook</a><span>|</span>
+                <a href="https://wa.me/201044096038" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </li>
+        </ul>
     </section>
 
     <section id="contact" class="contact">
@@ -81,6 +145,17 @@
     <footer>
         <p>© 2024 مجموعة المهندس الإنشائي شنودة بشير. جميع الحقوق محفوظة.</p>
     </footer>
+    <script>
+        // تغيير اللغة عند اختيار لغة من الـ Select
+        function changeLanguage(select) {
+            var language = select.value;
+            // إضافة منطق لترجمة المحتوى بناءً على اللغة المختارة
+        }
 
+        // عرض تفاصيل المشروع عند الضغط على أي مشروع
+        function showProjectDetails(project) {
+            // إضافة منطق لعرض تفاصيل المشروع
+        }
+    </script>
 </body>
 </html>
