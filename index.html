@@ -6,7 +6,7 @@
     <meta name="description" content="شنودة بشير">
     <meta name="description" content="Shenouda Besheer">
     <meta name="google-site-verification" content="MD7_jRq8C_zEXrSlkeIOxyvxQofto6jovErP1gBcPvM" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -18,52 +18,69 @@
 </head>
 
 <body >
-    
-    <nav class="navbar navbar-expand-lg ftco-navbar-light custom-navbar">
-        <div class="container-xl d-flex align-items-center justify-content-between">
-            <!-- Logo and Name -->
-            <div class="d-flex align-items-center">
-                <div class="logo">
-                    <img src="logo.png" alt="Logo" style="width:150px;"> <!-- Adjust the width as needed -->
-                </div>
-                <a class="navbar-brand align-items-center ms-3" href="https://www.facebook.com/Shenouda1111" target="_blank">
-                    <span class="name">Eng. Shenouda Besheer Group</span> 
-                    <small class="title d-block">Developer</small>
-                </a>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="لوجو الشركة" class="logo-img">
+            <h1>مجموعة المهندس الإنشائي شنودة بشير</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="projects" class="projects">
+        <h2>مشاريعنا</h2>
+        <div class="project-list">
+            <div class="project">
+                <img src="project1.jpg" alt="مشروع 1">
+                <h3>مشروع المارينا</h3>
+                <p>وصف مختصر عن المشروع...</p>
             </div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="menu-text">Menu</span>
-            </button>
-
-
-
-
-
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
-                    <li class="nav-item"><a class="nav-link" href="agents.html">Agents</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+            <div class="project">
+                <img src="project2.jpg" alt="مشروع 2">
+                <h3>مشروع الحجاز</h3>
+                <p>وصف مختصر عن المشروع...</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="مشروع 3">
+                <h3>مشروع الملك توت</h3>
+                <p>وصف مختصر عن المشروع...</p>
             </div>
         </div>
-    </nav>
+    </section>
 
+    <section id="contact" class="contact">
+        <h2>تواصل معنا</h2>
+        <form action="#" method="post">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" required>
 
-    
+            <label for="project">المشروع:</label>
+            <select id="project" name="project">
+                <option value="marina">مشروع المارينا</option>
+                <option value="hegaz">مشروع الحجاز</option>
+                <option value="king-tut">مشروع الملك توت</option>
+            </select>
 
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
 
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+        <p>© 2024 مجموعة المهندس الإنشائي شنودة بشير. جميع الحقوق محفوظة.</p>
+    </footer>
 
 </body>
 </html>
