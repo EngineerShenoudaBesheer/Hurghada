@@ -1,2 +1,204 @@
-justify-content: center; /* توسيط العناصر داخل القائمة */
+/* إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* تأثير عند تحميل الصفحة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* الرأس */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column; /* عرض العناصر بشكل عمودي */
+    text-align: center;
+}
+
+/* حاوية اللوجو واسم الشركة */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* مسافة بين اللوجو واسم الشركة */
+}
+
+.logo-img {
+    width: 150px; /* تعديل حجم اللوجو */
+    margin-right: 15px; /* مسافة بين اللوجو واسم الشركة */
+}
+
+header h1 {
+    margin: 0;
+    margin-right: ;
+    font-size: 2.5rem; /* زيادة حجم النص */
+    font-weight: 600;
+    color:  white; /* لون اسم الشركة */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+    letter-spacing: 0px; /* إضافة مسافة بين الحروف */
+}
+
+/* قائمة التنقل */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0px;
+    justify-content: center; /* توسيط العناصر داخل القائمة */
     width: 100%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* قسم المشاريع */
+.projects, .contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.projects h2, .contact h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+/* قسم التواصل */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input, 
+.contact form select, 
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact form input:focus, 
+.contact form select:focus, 
+.contact form textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
+}
+
+.contact form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #34495e;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
