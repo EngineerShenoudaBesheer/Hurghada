@@ -1,21 +1,14 @@
-/* Navbar Background */
-nav.custom-navbar {
-    background: #000d4a;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
+/* Container Alignment */
 nav.custom-navbar .container-xl {
-    max-width: 100%; 
-    padding: 0 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo+name and menu */
 }
 
 /* Logo */
+/* التصميم الافتراضي للشاشات الكبيرة */
 nav.custom-navbar .logo img {
-    margin-left: 50px;
-    width: auto; /* Adjust logo size */
-    height: auto;
+    width: 20%; /* نسبة مئوية للعرض */
 }
 
 /* Name and Title */
@@ -23,7 +16,7 @@ nav.custom-navbar .navbar-brand  .name{
     display: flex;
     flex-direction: column; /* Stack name and title vertically */
     align-items: flex-start;
-    margin-left: 50px;
+    margin-left: 30px;
     font-size: 1.5rem; 
     color: white; 
     font-weight: bold; 
@@ -34,7 +27,7 @@ nav.custom-navbar .navbar-brand  .title {
     display: flex;
     flex-direction: column; /* Stack name and title vertically */
     align-items: flex-start;
-    margin-left: 50px;
+    margin-left: 30px;
     font-size: 1rem;
     color: whitesmoke; 
     font-style: italic;  
@@ -56,37 +49,43 @@ nav.custom-navbar .navbar-nav .nav-link:hover {
     color: greenyellow;
 }
 
-
-nav.custom-navbar .d-flex {
-    flex-wrap: nowrap; /* منع العناصر من النزول إلى سطر جديد */
+/* Navbar Background */
+nav.custom-navbar {
+    background: #000d4a;
+    height: auto; /* Allow dynamic height */
 }
 
-.navbar-toggler {
-    margin-left: auto; /* دفع زر القائمة إلى أقصى اليمين */
-}
 
 .menu-text {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem; /* تصغير حجم النص إذا كان كبيرًا جدًا */
-    white-space: nowrap; /* منع الكلمة من الانكسار إلى سطر جديد */
+    color: white; /* Set text color to white */
+    font-size: 1.5rem; /* Optional: Set font size */
+    font-weight: bold; /* Optional: Make it bold */
+    margin-left: 0px; /* Optional: Add spacing from the icon */
 }
-@media (max-width: 768px) { /* الهواتف المحمولة */
-    .navbar-toggler {
-        margin-left: auto; /* دفع زر القائمة إلى اليمين */
+
+
+/* للشاشات الصغيرة (أقل من 768px) */
+@media (max-width: 768px) {
+    nav.custom-navbar .logo img {
+        width: 40%; /* قلل حجم الشعار للشاشات الصغيرة */
     }
 
-    .logo img {
-        width: 100px; /* تصغير الشعار */
-        height: auto;
+    nav.custom-navbar .navbar-nav {
+        flex-direction: column; /* تحويل القوائم إلى عمود */
+        align-items: center;
     }
 
+    nav.custom-navbar .navbar-nav .nav-link {
+        padding: 10px 0; /* مسافات بين العناصر */
+    }
+}
+
+@media (max-width: 576px) {
     .menu-text {
-        font-size: 1rem; /* تصغير حجم النص */
+        font-size: 1rem; /* تصغير النص لتناسب الهاتف */
     }
 
-    nav.custom-navbar .d-flex {
-        flex-wrap: nowrap; /* منع النزول إلى سطر جديد */
+    .navbar-brand .name {
+        font-size: 1.2rem;
     }
 }
-
