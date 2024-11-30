@@ -31,3 +31,10 @@ function toggleDescription(button) {
     // التبديل بين إظهار أو إخفاء الوصف
     description.classList.toggle('active');
 }
+
+
+
+
+
+
+
