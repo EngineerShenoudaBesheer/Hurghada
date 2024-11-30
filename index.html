@@ -28,6 +28,9 @@
                 <li><a href="#about">عن الشركة</a></li>
                 <li><a href="#marketing-team">فريق التسويق</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
+                
+            </ul>
+            <ul>
                 <li>
                     <select id="languageSelector" onchange="changeLanguage(this)">
                         <option value="ar">العربية</option>
@@ -61,7 +64,10 @@
                     موقع الشركة
                 </a>
             </p>
+
         </div>
+        <p></p>
+
     </div>
 </section>
 
@@ -69,7 +75,7 @@
 
 <!-- قسم المشاريع -->
 <section id="projects" class="projects">
-    <h2>مشاريعنا</h2>
+    <h2>مجموعة المهندس الانشائي شنودة بشير تقدم</h2>
     <div class="project-list">
         <!-- مشروع المارينا -->
         <div class="project">
@@ -100,6 +106,15 @@
             <button class="send-button" onclick="askForPropertyType('مشروع الملك توت')">إرسال</button>
             <p class="project-description">وصف كامل عن المشروع يوضح التفاصيل والمميزات...</p>
         </div>
+        <!-- مشروع الملك توت -->
+        <div class="project">
+            <img src="4.jpg" alt="مشروع 3">
+            <h3>مشروع الملك توت</h3>
+            <p class="location">الموقع: شارع الملك توت، الغردقة</p> <!-- إضافة الموقع -->
+            <button class="description-button" onclick="toggleDescription(this)">الوصف</button>
+            <button class="send-button" onclick="askForPropertyType('مشروع الملك توت')">إرسال</button>
+            <p class="project-description">وصف كامل عن المشروع يوضح التفاصيل والمميزات...</p>
+        </div>
     </div>
 </section>
 
@@ -115,12 +130,90 @@
 </div>
 
 
+<!-- 3rd mashree3-->
+<div class="slideshow-container">
+    <!-- Slide 1 -->
+    <div class="slide">
+        <video src="video1.mp4" autoplay muted loop></video>
+        <div class="slide-content">
+            <p><strong>المساحة:</strong> 120 متر مربع</p>
+            <p><strong>الموقع:</strong> الغردقة - شارع الشيراتون</p>
+            <p><strong>السعر:</strong> 1,200,000 جنيه</p>
+            <p><strong>طريقة الدفع:</strong> كاش أو تقسيط</p>
+            <div class="buttons">
+              <button class="button" onclick="sendDetails('120 متر مربع', 'الغردقة - شارع الشيراتون', '1,200,000 جنيه', 'كاش أو تقسيط')">
+                إرسال التفاصيل
+            </button>
+
+            <div class="hover-images">
+                <img src="2.jpg" alt="View 1">
+                <img src="3.jpg" alt="View 2">
+                <img src="4.jpg" alt="View 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <img src="https://via.placeholder.com/800x400?text=Apartment+2" alt="Apartment 2">
+  <div class="slide-content">
+    <p><strong>المساحة:</strong> 90 متر مربع</p>
+    <p><strong>الموقع:</strong> الغردقة - طريق المطار</p>
+    <p><strong>السعر:</strong> 950,000 جنيه</p>
+    <p><strong>طريقة الدفع:</strong> كاش أو تقسيط</p>
+    <div class="buttons">
+      <button class="button" onclick="sendDetails('90 متر مربع', 'الغردقة - طريق المطار', '950,000 جنيه', 'كاش أو تقسيط')">
+        إرسال التفاصيل
+    </button>
+
+    <div class="hover-images">
+        <img src="https://via.placeholder.com/100x60?text=View+1" alt="View 1">
+        <img src="https://via.placeholder.com/100x60?text=View+2" alt="View 2">
+        <img src="https://via.placeholder.com/100x60?text=View+3" alt="View 3">
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="navigation">
+  <button class="nav-button" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="nav-button" onclick="changeSlide(1)">&#10095;</button>
+</div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+  }
+
+  function sendDetails(space, location, price, paymentMethod) {
+      const message = `تفاصيل الشقة:\nالمساحة: ${space}\nالموقع: ${location}\nالسعر: ${price}\nطريقة الدفع: ${paymentMethod}`;
+      const phone = "01044096035";
+      alert(`تم إرسال التفاصيل:\n${message}`);
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+  }
+
+    // Initialize the first slide
+  showSlide(currentSlide);
+</script>
 
 
 
 <!-- قسم التواصل مع فريق التسويق -->
 <section id="marketing-team" class="marketing-team">
-    <h2 id="supportTitle">التواصل مع فريق التسويق</h2>
+    <h2 id="supportTitle">التواصل مع فريق التسويق   </h2>
     <br>
     <ul class="list-unstyled">
         <!-- كيرلس نصحي -->
@@ -232,17 +325,6 @@
 <footer>
     <p>© 2024 مجموعة المهندس الإنشائي شنودة بشير. جميع الحقوق محفوظة.</p>
 </footer>
-<script>
-        // تغيير اللغة عند اختيار لغة من الـ Select
-    function changeLanguage(select) {
-        var language = select.value;
-            // إضافة منطق لترجمة المحتوى بناءً على اللغة المختارة
-    }
 
-        // عرض تفاصيل المشروع عند الضغط على أي مشروع
-    function showProjectDetails(project) {
-            // إضافة منطق لعرض تفاصيل المشروع
-    }
-</script>
 </body>
 </html>
