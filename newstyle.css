@@ -581,6 +581,8 @@ footer {
 /* farek altswe*/
 
 #marketing-team {
+    margin-right: -10px;
+    margin-left: 20px;
     padding: 50px 0px;
     background-color: white;
     text-align: center;
