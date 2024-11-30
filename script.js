@@ -33,6 +33,11 @@ function toggleDescription(button) {
 }
 
 
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
 
 
 
