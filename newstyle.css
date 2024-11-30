@@ -677,17 +677,25 @@ footer {
 
 
 .slideshow-container {
-  width: 100%;
-  max-width: 900px;
+  width: 100%; /* يأخذ العرض الكامل للمحتوى */
+  max-width: 360px; /* أقصى عرض مناسب لجهاز محمول */
+  aspect-ratio: 9 / 16; /* الحفاظ على نسبة 1080x1920 */
   position: relative;
   margin: 20px auto;
-  height: 100%;
+  overflow: hidden; /* لإخفاء أي محتوى زائد عن الحدود */
+  border-radius: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.slide {
-  display: none;
-  position: relative;
+.slide video {
+  width: 100%; /* يتمدد الفيديو ليغطي العرض */
+  height: 100%; /* يتناسب مع ارتفاع الـ slideshow */
+  object-fit: cover; /* يغطي المساحة بالكامل دون تشويه */
+  border-radius: 10px;
 }
+
+
 
 .slide img {
   width: 100%;
@@ -732,29 +740,31 @@ footer {
 
 
 .navigation {
-  position: absolute;
-  top: 105%;
-  width: 100%;
-  gap: 50px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  transform: translateY(-50%);
+    position: relative;
+    bottom:10%; /* عدل الموضع ليلائم احتياجاتك */
+    width: 100%;
+    gap: 250px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(0);
+    padding: 0 10px; /* أضف مسافة حول الأزرار */
 }
 
 .nav-button {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 0%;
-  transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
+
 
 
 .button-related {
