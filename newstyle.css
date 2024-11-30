@@ -581,7 +581,7 @@ footer {
 /* farek altswe*/
 
 #marketing-team {
-    margin-right: -10px;
+
     margin-left: 20px;
     padding: 50px 0px;
     background-color: white;
@@ -608,7 +608,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
-    width: 60%; /* التحكم في العرض */
+    width: 100%; /* التحكم في العرض */
     max-width: 100%; /* لضمان التناسب في الشاشات الصغيرة */
 
 }
