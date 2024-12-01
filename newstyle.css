@@ -130,6 +130,33 @@ nav ul li a:hover {
 
 
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.square {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
 
 
 
@@ -746,13 +773,17 @@ footer {
 .slide-content p {
   margin: 5px 0;
   font-size: 14px;
+  text-align: center; /* لمحاذاة النص أفقيًا في المنتصف */
+
 }
 
 .buttons {
   margin-top: 10px;
+  text-align: center;
 }
 
 .button {
+
   background-color: #007bff;
   color: white;
   padding: 8px 12px;
