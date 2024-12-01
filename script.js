@@ -16,7 +16,7 @@ function closeModal() {
 }
 
 function sendWhatsappWithType(propertyType) {
-    const phoneNumber = '01044096035'; // رقم الهاتف الذي ستُرسل إليه الرسالة
+    const phoneNumber = '201044096035'; // رقم الهاتف الذي ستُرسل إليه الرسالة
     const message = `مرحباً، أريد معرفة المزيد عن ${selectedProject}. نوع العقار: ${propertyType}.\nمن فضلك، تواصل معي.`;
     
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
