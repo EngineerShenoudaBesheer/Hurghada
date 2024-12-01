@@ -31,6 +31,14 @@ function toggleDescription(button) {
     // التبديل بين إظهار أو إخفاء الوصف
     description.classList.toggle('active');
 }
+function sendWhatsApp(choice) {
+    const phoneNumber = '201044096035'; // رقم الهاتف المستلم على واتساب
+    const message = `بسال عن: ${choice}`; // الرسالة التي تحتوي على الاختيار
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`; // الرابط مع النص
+
+    // فتح رابط WhatsApp
+    window.open(url, '_blank');
+}
 
 
 function showSlide(index) {
@@ -57,7 +65,7 @@ const translations = {
         
         "mortgage": "تمويل عقاري",
         "shops": "محلات تجارية",
-        "installments": "تقسيط",
+        "installments": "وحدات بالتقسيط",
         "companyPresentation": "مجموعة المهندس الانشائي شنودة بشير تقدم",
         "projectTitle": "مشروع الانتر استار",
         "projectLocation": "الموقع: خلف مستشفي الحياة - الانتركونتننتل - الغردقة",
@@ -269,7 +277,7 @@ const translations = {
         // الترجمات الخاصة بالأزرار
         "mortgage": "Hypothek",
         "shops": "Läden",
-        "installments": "Ratenzahlung",
+        "installments": "Einheiten in Raten",
         "companyPresentation": "Ingenieur Shenouda Basheer Gruppe",
         "projectTitle": "Inter Star Projekt",
         "projectLocation": "Standort: Hinter dem Al Hayat Krankenhaus - Intercontinental - Hurghada",
@@ -377,7 +385,7 @@ const translations = {
         // الترجمات الخاصة بالأزرار
         "mortgage": "Ипотека",
         "shops": "Магазины",
-        "installments": "Рассрочка",
+        "installments": "Единицы в рассрочку",
         "companyPresentation": "Группа инженера Шенуды Башира",
         "projectTitle": "Проект Интер Стар",
         "projectLocation": "Местоположение: За больницей Аль Хая - Интерконтиненталь - Хургада",
@@ -484,7 +492,7 @@ const translations = {
         // الترجمات الخاصة بالأزرار
         "mortgage": "Prêt hypothécaire",
         "shops": "Magasins",
-        "installments": "Paiements échelonnés",
+        "installments": "Unités en mensualités",
         "companyPresentation": "Le groupe de l'ingénieur Shenouda Basheer",
         "projectTitle": "Projet Inter Star",
         "projectLocation": "Emplacement: Derrière l'hôpital Al Hayat - Intercontinental - Hurghada",
@@ -591,7 +599,7 @@ const translations = {
         // الترجمات الخاصة بالأزرار
         "mortgage": "Hipoteca",
         "shops": "Tiendas",
-        "installments": "Pagos a plazos",
+        "installments": "Unidades a plazos",
         "companyPresentation": "El grupo del ingeniero Shenouda Basheer",
         "projectTitle": "Proyecto Inter Star",
         "projectLocation": "Ubicación: Detrás del hospital Al Hayat - Intercontinental - Hurghada",
