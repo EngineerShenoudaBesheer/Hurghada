@@ -372,7 +372,7 @@
 
   function sendDetails(space, location, price, paymentMethod) {
       const message = `تفاصيل الشقة:\nالمساحة: ${space}\nالموقع: ${location}\nالسعر: ${price}\nطريقة الدفع: ${paymentMethod}`;
-      const phone = "01044096035";
+      const phone = "201044096035";
       alert(`تم إرسال التفاصيل:\n${message}`);
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   }
